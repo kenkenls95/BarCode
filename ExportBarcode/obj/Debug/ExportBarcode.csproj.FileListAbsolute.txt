@@ -1,0 +1,110 @@
+C:\_Projects\HelloWord\HelloWord\bin\Debug\SQLite.Interop.066.DLL
+C:\_Projects\HelloWord\HelloWord\bin\Debug\SQLite.Interop.066.exp
+C:\_Projects\HelloWord\HelloWord\bin\Debug\SQLite.Interop.066.lib
+C:\_Projects\HelloWord\HelloWord\bin\Debug\ExportBarcode.exe
+C:\_Projects\HelloWord\HelloWord\bin\Debug\ExportBarcode.pdb
+C:\_Projects\HelloWord\HelloWord\bin\Debug\System.Data.SQLite.dll
+C:\_Projects\HelloWord\HelloWord\bin\Debug\System.Data.SQLite.pdb
+C:\_Projects\HelloWord\HelloWord\bin\Debug\System.Data.SQLite.xml
+C:\_Projects\HelloWord\HelloWord\obj\Debug\ResolveAssemblyReference.cache
+C:\_Projects\HelloWord\HelloWord\obj\Debug\HelloWord.frmLogin.resources
+C:\_Projects\HelloWord\HelloWord\obj\Debug\HelloWord.frmMain.resources
+C:\_Projects\HelloWord\HelloWord\obj\Debug\ExportBarcode.Properties.Resources.resources
+C:\_Projects\HelloWord\HelloWord\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+C:\_Projects\HelloWord\HelloWord\obj\Debug\ExportBarcode.exe
+C:\_Projects\HelloWord\HelloWord\obj\Debug\ExportBarcode.pdb
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\HelloWord.frmLogin.resources
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\HelloWord.frmMain.resources
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\ExportBarcode.Properties.Resources.resources
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\bin\Debug\ExportBarcode.exe
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\bin\Debug\ExportBarcode.pdb
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\ExportBarcode.exe
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\obj\Debug\ExportBarcode.pdb
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\bin\Debug\DB.sdf
+C:\Users\DEV .NET\Desktop\New folder\HelloWord\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\DB.sdf
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\ExportBarcode.exe
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\ExportBarcode.pdb
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\System.Data.OracleClient.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\System.Transactions.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\System.EnterpriseServices.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\System.Web.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\bin\Debug\System.EnterpriseServices.Wrapper.dll
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\HelloWord.frmLogin.resources
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\HelloWord.frmMain.resources
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\ExportBarcode.Properties.Resources.resources
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\ExportBarcode.exe
+C:\Users\DEV .NET\Downloads\barCode\HelloWord\obj\Debug\ExportBarcode.pdb
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\DB.sdf
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\ExportBarcode.exe
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\ExportBarcode.pdb
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\System.Data.OracleClient.dll
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\System.Transactions.dll
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\System.EnterpriseServices.dll
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\System.Web.dll
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\System.EnterpriseServices.Wrapper.dll
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\ResolveAssemblyReference.cache
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\HelloWord.frmLogin.resources
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\HelloWord.frmMain.resources
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\ExportBarcode.Properties.Resources.resources
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\ExportBarcode.exe
+E:\DaoKien\_Barcode\barCode\HelloWord\obj\Debug\ExportBarcode.pdb
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\SQLite.Interop.084.dll
+E:\DaoKien\_Barcode\barCode\HelloWord\bin\Debug\System.Data.SQLite.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\DB.sdf
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\SQLite.Interop.084.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\ExportBarcode.exe
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\ExportBarcode.pdb
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\System.Data.SQLite.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\System.Data.OracleClient.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\System.Transactions.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\System.EnterpriseServices.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\System.Web.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\bin\Debug\System.EnterpriseServices.Wrapper.dll
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\HelloWord.frmLogin.resources
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\HelloWord.frmMain.resources
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\ExportBarcode.exe
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\ExportBarcode.pdb
+C:\Users\DEV\Desktop\barCode\HelloWord\obj\Debug\ExportBarcode.Resource1.resources
+D:\barCode\HelloWord\bin\Debug\DB.sdf
+D:\barCode\HelloWord\bin\Debug\SQLite.Interop.084.dll
+D:\barCode\HelloWord\bin\Debug\ExportBarcode.exe
+D:\barCode\HelloWord\bin\Debug\ExportBarcode.pdb
+D:\barCode\HelloWord\bin\Debug\System.Data.SQLite.dll
+D:\barCode\HelloWord\bin\Debug\System.Data.OracleClient.dll
+D:\barCode\HelloWord\bin\Debug\System.Transactions.dll
+D:\barCode\HelloWord\bin\Debug\System.EnterpriseServices.dll
+D:\barCode\HelloWord\bin\Debug\System.Web.dll
+D:\barCode\HelloWord\bin\Debug\System.EnterpriseServices.Wrapper.dll
+D:\barCode\HelloWord\obj\Debug\ResolveAssemblyReference.cache
+D:\barCode\HelloWord\obj\Debug\HelloWord.frmLogin.resources
+D:\barCode\HelloWord\obj\Debug\HelloWord.frmMain.resources
+D:\barCode\HelloWord\obj\Debug\ExportBarcode.Resource1.resources
+D:\barCode\HelloWord\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+D:\barCode\HelloWord\obj\Debug\ExportBarcode.exe
+D:\barCode\HelloWord\obj\Debug\ExportBarcode.pdb
+D:\barCode\ExportBarcode\bin\Debug\DB.sdf
+D:\barCode\ExportBarcode\bin\Debug\SQLite.Interop.084.dll
+D:\barCode\ExportBarcode\bin\Debug\ExportBarcode.exe
+D:\barCode\ExportBarcode\bin\Debug\ExportBarcode.pdb
+D:\barCode\ExportBarcode\bin\Debug\System.Data.SQLite.dll
+D:\barCode\ExportBarcode\bin\Debug\System.Data.OracleClient.dll
+D:\barCode\ExportBarcode\bin\Debug\System.Transactions.dll
+D:\barCode\ExportBarcode\bin\Debug\System.EnterpriseServices.dll
+D:\barCode\ExportBarcode\bin\Debug\System.Web.dll
+D:\barCode\ExportBarcode\bin\Debug\System.EnterpriseServices.Wrapper.dll
+D:\barCode\ExportBarcode\obj\Debug\ResolveAssemblyReference.cache
+D:\barCode\ExportBarcode\obj\Debug\HelloWord.frmLogin.resources
+D:\barCode\ExportBarcode\obj\Debug\HelloWord.frmMain.resources
+D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.Resource1.resources
+D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
+D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.exe
+D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.pdb

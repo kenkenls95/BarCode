@@ -1,0 +1,9 @@
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\bin\Release\HelloWord.exe
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\bin\Release\HelloWord.pdb
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\ResolveAssemblyReference.cache
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.Properties.Resources.resources
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.csproj.GenerateResource.Cache
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.exe
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.pdb
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.frmMain.resources
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.frmLogin.resources

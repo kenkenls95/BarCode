@@ -1,0 +1,10 @@
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\ResolveAssemblyReference.cache
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.frmLogin.resources
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\HelloWord.frmMain.resources
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\ExportBarcode.Properties.Resources.resources
+C:\Users\nguyen.tuan.dat\Desktop\Helloword\HelloWord\HelloWord\obj\Release\ExportBarcode.csproj.GenerateResource.Cache
+C:\_Projects\HelloWord\HelloWord\obj\Release\ResolveAssemblyReference.cache
+C:\_Projects\HelloWord\HelloWord\obj\Release\HelloWord.frmLogin.resources
+C:\_Projects\HelloWord\HelloWord\obj\Release\HelloWord.frmMain.resources
+C:\_Projects\HelloWord\HelloWord\obj\Release\ExportBarcode.Properties.Resources.resources
+C:\_Projects\HelloWord\HelloWord\obj\Release\ExportBarcode.csproj.GenerateResource.Cache

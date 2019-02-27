@@ -62,7 +62,7 @@
             // btnScan
             // 
             this.btnScan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.btnScan.Location = new System.Drawing.Point(117, 276);
+            this.btnScan.Location = new System.Drawing.Point(120, 266);
             this.btnScan.Name = "btnScan";
             this.btnScan.Size = new System.Drawing.Size(88, 35);
             this.btnScan.TabIndex = 0;
@@ -71,11 +71,10 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(123, 228);
+            this.txtCode.Location = new System.Drawing.Point(129, 228);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(184, 23);
             this.txtCode.TabIndex = 1;
-            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // panel1
@@ -104,7 +103,6 @@
             this.linkLabel1.Size = new System.Drawing.Size(56, 20);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.Text = "Thoát";
-            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
             // 
             // label1
             // 
@@ -156,15 +154,14 @@
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(114, 20);
             this.Title.Text = "START MODULE";
-            this.Title.ParentChanged += new System.EventHandler(this.label7_ParentChanged);
             // 
             // btnSkip
             // 
-            this.btnSkip.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular);
-            this.btnSkip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSkip.Location = new System.Drawing.Point(136, 322);
+            this.btnSkip.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSkip.ForeColor = System.Drawing.Color.Red;
+            this.btnSkip.Location = new System.Drawing.Point(129, 313);
             this.btnSkip.Name = "btnSkip";
-            this.btnSkip.Size = new System.Drawing.Size(56, 20);
+            this.btnSkip.Size = new System.Drawing.Size(79, 20);
             this.btnSkip.TabIndex = 14;
             this.btnSkip.Text = "Bỏ qua";
             this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
@@ -183,7 +180,6 @@
             this.lblStep.Location = new System.Drawing.Point(52, 43);
             this.lblStep.Name = "lblStep";
             this.lblStep.Size = new System.Drawing.Size(242, 20);
-            this.lblStep.ParentChanged += new System.EventHandler(this.lblStep_ParentChanged);
             // 
             // lblCaseNo
             // 
@@ -191,7 +187,6 @@
             this.lblCaseNo.Location = new System.Drawing.Point(72, 76);
             this.lblCaseNo.Name = "lblCaseNo";
             this.lblCaseNo.Size = new System.Drawing.Size(228, 20);
-            this.lblCaseNo.ParentChanged += new System.EventHandler(this.lblCaseNo_ParentChanged);
             // 
             // lblSupplierPart
             // 
@@ -218,25 +213,23 @@
             // 
             this.lblPopup.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.lblPopup.ForeColor = System.Drawing.Color.Red;
-            this.lblPopup.Location = new System.Drawing.Point(90, 355);
+            this.lblPopup.Location = new System.Drawing.Point(98, 345);
             this.lblPopup.Name = "lblPopup";
-            this.lblPopup.Size = new System.Drawing.Size(223, 20);
-            this.lblPopup.ParentChanged += new System.EventHandler(this.label7_ParentChanged_1);
+            this.lblPopup.Size = new System.Drawing.Size(215, 20);
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(15, 355);
+            this.label7.Location = new System.Drawing.Point(15, 345);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.Text = "Thông báo:";
-            this.label7.ParentChanged += new System.EventHandler(this.label7_ParentChanged_2);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(219, 276);
+            this.button1.Location = new System.Drawing.Point(225, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 35);
             this.button1.TabIndex = 24;
@@ -246,7 +239,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(15, 276);
+            this.button2.Location = new System.Drawing.Point(15, 266);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 35);
             this.button2.TabIndex = 25;
@@ -260,7 +253,7 @@
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(88, 35);
             this.btnSetting.TabIndex = 41;
-            this.btnSetting.Text = "Xóa Dữ Liệu";
+            this.btnSetting.Text = "Xóa Dữ liệu";
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // frmMain

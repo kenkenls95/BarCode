@@ -14,7 +14,20 @@ namespace ExportBarcode.DAO
             StringBuilder query = new StringBuilder();
             query.Append("SELECT * FROM PL_PACKING ");
             query.Append(" WHERE [MODULENO] = " + DB.SQuote(moduleNo));
-            query.Append(" AND [BEGINACTUALPACKING] IS NULL AND [ENDACTUALPACKING] IS NULL");
+            query.Append(" AND [BEGINACTUALPACKING] IS NOT NULL AND [ENDACTUALPACKING] IS NOT NULL AND [PENDING] <> 1 ");
+            DataTable dt = new DB().GetTable(query.ToString());
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                return dt;
+            }
+            return null;
+        }
+
+        public static DataTable getById(string moduleNo)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("SELECT * FROM PL_PACKING ");
+            query.Append(" WHERE [MODULENO] = " + DB.SQuote(moduleNo));
             DataTable dt = new DB().GetTable(query.ToString());
             if (dt != null && dt.Rows.Count > 0)
             {
@@ -100,15 +113,17 @@ namespace ExportBarcode.DAO
             }
         }
 
-        public static Boolean skipCase(String moduleNo, Int32 pending)
+        public static Boolean skipCase(DateTime begin, DateTime end, String moduleNo, Int32 pending)
         {
             try
             {
                 DB db = new DB();
                 String query = "";
                 SQLiteCommand cmd = new SQLiteCommand();
-                query += "UPDATE PL_PACKING SET [PENDING] = @pen WHERE [MODULENO] = @M";
+                query += "UPDATE PL_PACKING SET [BEGINACTUALPACKING] = @b, [ENDACTUALPACKING] = @e, [PENDING] = @pen WHERE [MODULENO] = @M";
                 cmd.CommandText = query;
+                cmd.Parameters.Add(new SQLiteParameter("@b", begin.ToString("yyyy-MM-dd HH:mm:ss")));
+                cmd.Parameters.Add(new SQLiteParameter("@e", end.ToString("yyyy-MM-dd HH:mm:ss")));
                 cmd.Parameters.Add(new SQLiteParameter("@pen", pending));
                 cmd.Parameters.Add(new SQLiteParameter("@M", moduleNo));
                 return db.ExecuteNonQuery(cmd);
@@ -163,7 +178,7 @@ namespace ExportBarcode.DAO
                 DB db = new DB();
                 String query = "";
                 SQLiteCommand cmd = new SQLiteCommand();
-                query += "DELETE PL_PACKING";
+                query += "DELETE FROM PL_PACKING";
                 cmd.CommandText = query;
                 return db.ExecuteNonQuery(cmd);
             }

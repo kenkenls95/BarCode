@@ -22,7 +22,7 @@ namespace HelloWord
     {
         private static IList<PartDetail> moduleDetails = new List<PartDetail>();
         private static bool isScanBox = false;
-        private static string caseNo;
+        private static string caseNo = null; 
         private static Int32 total = 0;
         private static DateTime begin;
         private static DateTime end;
@@ -63,8 +63,9 @@ namespace HelloWord
 
         private string scanModule(String moduleNo)
         {
-            DataTable dt = PackingDAO.LoadScreen(moduleNo);
-            if (dt.Rows.Count > 0)
+            DataTable dt = PackingDetailsDAO.LoadScreen(moduleNo);
+            DataTable dtPacking = PackingDAO.LoadScreen(moduleNo);
+            if (dt.Rows.Count > 0 && dtPacking == null)
             {
                 caseNo = dt.Rows[0]["MODULENO"].ToString();
                 lblStep.Text = "Scan QrCode Supplier";
@@ -95,7 +96,7 @@ namespace HelloWord
                 txtCode.Text = "";
                 return "OK";
             }
-            else if (dt != null) return "Module đã hoàn thành đóng";
+            else if (dtPacking.Rows.Count > 0) return "Module đã hoàn thành đóng";
             else return "ModuleNo không tồn tại";
         }
 
@@ -274,24 +275,6 @@ namespace HelloWord
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void lblCaseNo_ParentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
-        private void txtCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -341,36 +324,25 @@ namespace HelloWord
             }
         }
 
-        private void label7_ParentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblStep_ParentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_ParentChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSkip_Click(object sender, EventArgs e)
         {
-            bindInfo();
-            lblStep.Text = "Scan QrCode Supplier";
-            scanSup = false;
-            scanTMV = false;
-            actual = 0;
-            total = 0;
-            lblPopup.Text = "";
-            PackingDAO.skipCase(caseNo, 1);
-            Service.skip(caseNo, begin.ToString("yyyy-MM-dd HH:mm:ss"));
-        }
-
-        private void label7_ParentChanged_2(object sender, EventArgs e)
-        {
+            if (caseNo == null)
+            {
+                lblPopup.Text = "Mời quét Module No";
+            }
+            else {
+                bindInfo();
+                lblStep.Text = "";
+                scanSup = false;
+                scanTMV = false;
+                isScanBox = false;
+                actual = 0;
+                total = 0;
+                lblPopup.Text = "Bỏ qua thành công";
+                Title.Text = "START MODULE";
+                PackingDAO.skipCase(begin, end, caseNo, 1);
+                Service.skip(caseNo);
+            }
 
         }
 
@@ -381,8 +353,13 @@ namespace HelloWord
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Service.syncDB();
-            Service.sendData();
+            try {
+                Service.syncDB();
+                Service.sendData();
+                lblPopup.Text = "Đồng bộ thành công";
+            }catch(Exception ex){
+                lblPopup.Text = ex.Message.ToString();
+            }
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

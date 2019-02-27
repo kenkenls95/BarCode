@@ -124,7 +124,7 @@ namespace ExportBarcode.DAO
                 DB db = new DB();
                 String query = "";
                 SQLiteCommand cmd = new SQLiteCommand();
-                query += "DELETE PL_PACKINGDETAILS";
+                query += "DELETE FROM PL_PACKINGDETAILS";
                 cmd.CommandText = query;
                 return db.ExecuteNonQuery(cmd);
             }

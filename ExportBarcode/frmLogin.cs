@@ -64,5 +64,10 @@ namespace HelloWord
             this.DialogResult = DialogResult.Cancel;
             Application.Exit();
         }
+
+        private void lblActual_ParentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

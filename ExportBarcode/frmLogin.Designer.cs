@@ -70,11 +70,12 @@
             // 
             // lblActual
             // 
-            this.lblActual.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular);
+            this.lblActual.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular);
             this.lblActual.Location = new System.Drawing.Point(9, 36);
             this.lblActual.Name = "lblActual";
             this.lblActual.Size = new System.Drawing.Size(242, 20);
             this.lblActual.Text = "Thông tin đăng nhập";
+            this.lblActual.ParentChanged += new System.EventHandler(this.lblActual_ParentChanged);
             // 
             // label3
             // 

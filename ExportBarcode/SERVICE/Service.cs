@@ -139,22 +139,21 @@ namespace ExportBarcode.SERVICE
             }
         }
 
-        public static Boolean skip(String caseNo, String begin) {
+        public static Boolean skip(String caseNo) {
             IList<PackingUpdate> list = new List<PackingUpdate>();
             PackingUpdate t = new PackingUpdate();
-            DataTable dt = PackingDAO.LoadScreen(caseNo);
+            DataTable dt = PackingDAO.getById(caseNo);
             t.packingId = Int32.Parse(dt.Rows[0]["PACKINGID"].ToString());
             t.moduleNo = caseNo;
-            t.beginActualPacking = begin;
+            t.beginActualPacking = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             t.endActualPacking = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             t.pending = 1;
             t.packingDate = DateTime.Now.ToString("yyyy-MM-dd");
             list.Add(t);
 
             //Meta rs = JsonConvert.DeserializeObject<Meta>(SendAPI(list, "POST", "http://" + Constant.Constant.HOST + "/tmv/progress-screen"));
-            MetaData rs = Converter.Deserialize<MetaData>(SendAPI(list, "POST", "http://" + Constant.Constant.HOST + "/tmv/progress-screen"));
-            if (rs.meta.status_code.Equals(Constant.Constant.SUCCESS)) return true;
-            else return false;
+            SendAPI(list, "POST", "http://" + Constant.Constant.HOST + "/tmv/progress-screen");
+            return true;
             
         }
 
@@ -212,12 +211,13 @@ namespace ExportBarcode.SERVICE
         {
             try
             {
-                if (PackingDetailsDAO.deletePackingDetals() && PackingDAO.deletePacking())
-                    return true;
-                else return false;
+                PackingDetailsDAO.deletePackingDetals();
+                PackingDAO.deletePacking();
+                return true;
             }
-            catch (Exception e) { 
-                return false; 
+            catch (Exception e)
+            {
+                return false;
             }
         }
     }

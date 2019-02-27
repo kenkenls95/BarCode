@@ -17,9 +17,6 @@ namespace HelloWord
             {
                 Application.Run(dlgMain);
             }
-
-
-
         }
     }
 }

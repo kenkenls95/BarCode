@@ -11,6 +11,7 @@ using ExportBarcode.DAO;
 using ExportBarcode.SERVICE;
 using ExportBarcode.MODEL;
 using ExportBarcode.Common;
+using ExportBarcode;
 
 
 
@@ -63,41 +64,50 @@ namespace HelloWord
 
         private string scanModule(String moduleNo)
         {
-            DataTable dt = PackingDetailsDAO.LoadScreen(moduleNo);
-            DataTable dtPacking = PackingDAO.LoadScreen(moduleNo);
-            if (dt.Rows.Count > 0 && dtPacking == null)
+            if (moduleNo.Split("-").Length > 1)
             {
-                caseNo = dt.Rows[0]["MODULENO"].ToString();
-                lblStep.Text = "Scan QrCode Supplier";
-                lblCaseNo.Text = caseNo;
-                lblSupplierPart.Text = "";
-                lblTMVPart.Text = "";
-                lblActual.Text = "";
-                lblPopup.Text = "";
-
-                begin = DateTime.Now;
-                isScanBox = true;
-                Title.Text = "BOX";
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    if (dt.Rows[i]["PARTNO"] == null) break;
-                    PartDetail p = new PartDetail();
-                    p.box = dt.Rows[i]["BOX"].ToString();
-                    p.partId = dt.Rows[i]["PARTID"].ToString();
-                    p.partNo = dt.Rows[i]["PARTNO"].ToString();
-                    p.qtyPerBox = dt.Rows[i]["QTYPERBOX"].ToString();
-                    p.moduleNo = caseNo;
-                    p.actual = 0;
-                    p.actualTmv = 0;
-                    moduleDetails.Add(p);
-                    total += Int32.Parse(p.box) * Int32.Parse(p.qtyPerBox);
-                }
+                frmPopup pop = new frmPopup();
                 
-                txtCode.Text = "";
-                return "OK";
             }
-            else if (dtPacking.Rows.Count > 0) return "Module đã hoàn thành đóng";
-            else return "ModuleNo không tồn tại";
+            else
+            {
+                DataTable dt = PackingDetailsDAO.LoadScreen(moduleNo);
+                DataTable dtPacking = PackingDAO.LoadScreen(moduleNo);
+                if (dt.Rows.Count > 0 && dtPacking == null)
+                {
+                    caseNo = dt.Rows[0]["MODULENO"].ToString();
+                    lblStep.Text = "Scan QrCode Supplier";
+                    lblCaseNo.Text = caseNo;
+                    lblSupplierPart.Text = "";
+                    lblTMVPart.Text = "";
+                    lblActual.Text = "";
+                    lblPopup.Text = "";
+
+                    begin = DateTime.Now;
+                    isScanBox = true;
+                    Title.Text = "BOX";
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        if (dt.Rows[i]["PARTNO"] == null) break;
+                        PartDetail p = new PartDetail();
+                        p.box = dt.Rows[i]["BOX"].ToString();
+                        p.partId = dt.Rows[i]["PARTID"].ToString();
+                        p.partNo = dt.Rows[i]["PARTNO"].ToString();
+                        p.qtyPerBox = dt.Rows[i]["QTYPERBOX"].ToString();
+                        p.moduleNo = caseNo;
+                        p.actual = 0;
+                        p.actualTmv = 0;
+                        moduleDetails.Add(p);
+                        total += Int32.Parse(p.box) * Int32.Parse(p.qtyPerBox);
+                    }
+
+                    txtCode.Text = "";
+                    return "OK";
+                }
+                else if (dtPacking.Rows.Count > 0) return "Module đã hoàn thành đóng";
+                else return "ModuleNo không tồn tại";
+            }
+            
         }
 
         private string scanBoxSupplier(String partNo, String color, String minorCode)
@@ -336,6 +346,7 @@ namespace HelloWord
                 scanSup = false;
                 scanTMV = false;
                 isScanBox = false;
+                moduleDetails.Clear();
                 actual = 0;
                 total = 0;
                 lblPopup.Text = "Bỏ qua thành công";
@@ -355,14 +366,16 @@ namespace HelloWord
         {
             try {
                 Service.syncDB();
+                Service.syncDBReceiving();
                 Service.sendData();
+                Service.sendDataReceiving();
                 lblPopup.Text = "Đồng bộ thành công";
             }catch(Exception ex){
                 lblPopup.Text = ex.Message.ToString();
             }
         }
 
-        private void btnSetting_Click(object sender, EventArgs e)
+        private void btnClean_Click(object sender, EventArgs e)
         {
             if (Service.delete())
                 lblPopup.Text = "Xóa dữ liệu thành công";

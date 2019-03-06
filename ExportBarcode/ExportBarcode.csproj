@@ -67,6 +67,7 @@
     <Compile Include="Common\Meta.cs" />
     <Compile Include="Common\MetaData.cs" />
     <Compile Include="Constant\Constant.cs" />
+    <Compile Include="DAO\ReceivingDAO.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,14 +84,23 @@
     <Compile Include="MODEL\PackingDetails.cs" />
     <Compile Include="MODEL\PackingDetailsUpdate.cs" />
     <Compile Include="MODEL\PartDetail.cs" />
+    <Compile Include="MODEL\ReceivingUpdate.cs" />
     <Compile Include="MODEL\Sync.cs" />
     <Compile Include="MODEL\PackingUpdate.cs" />
+    <Compile Include="MODEL\ReceivingDTO.cs" />
+    <Compile Include="MODEL\ReceivingPOJO.cs" />
     <Compile Include="MODEL\UpdateCase.cs" />
     <Compile Include="DAO\PackingDetailsDAO.cs" />
     <Compile Include="DAO\PackingDAO.cs" />
     <Compile Include="MODEL\SyncPOJO.cs" />
     <Compile Include="DAO\test.cs" />
     <Compile Include="DAO\User.cs" />
+    <Compile Include="frmPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopup.Designer.cs">
+      <DependentUpon>frmPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -101,9 +111,17 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPopup.resx">
+      <DependentUpon>frmPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Resource1.Designer.cs">
@@ -112,6 +130,12 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="SERVICE\Service.cs" />
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB.sdf">

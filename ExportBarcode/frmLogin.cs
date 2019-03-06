@@ -46,7 +46,9 @@ namespace HelloWord
                     {
                         this.DialogResult = DialogResult.OK;
                         Service.syncDB();
+                        Service.syncDBReceiving();
                         Service.sendData();
+                        Service.sendDataReceiving();
                         return;
                     }
                     MessageBox.Show("Thông tên đăng nhập không đúng.");

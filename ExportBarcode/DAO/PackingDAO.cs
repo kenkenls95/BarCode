@@ -61,14 +61,13 @@ namespace ExportBarcode.DAO
             {
                 DB db = new DB();
                 String query = "";
-                query += "INSERT INTO PL_PACKING([PACKINGID],[MODULENO],[IMPORTERSERIESNAME],[BOX],[PACKINGDATE],[PENDING],";
+                query += "INSERT INTO PL_PACKING([PACKINGID],[MODULENO],[BOX],[PACKINGDATE],[PENDING],";
                 query += "[ANDONPACKINGDATE],[LINE]) VALUES (";
-                query += "@packingid,@moduleno,@impseriesname,@box,@packingdate,@pending,@andonpackingdate,@line)";
+                query += "@packingid,@moduleno,@box,@packingdate,@pending,@andonpackingdate,@line)";
                 SQLiteCommand cmd = new SQLiteCommand();
                 cmd.CommandText = query;
                 cmd.Parameters.Add(new SQLiteParameter("@packingid", p.packingId));
                 cmd.Parameters.Add(new SQLiteParameter("@moduleno", p.moduleNo));
-                cmd.Parameters.Add(new SQLiteParameter("@impseriesname", p.importerSeriesName));
                 cmd.Parameters.Add(new SQLiteParameter("@box", p.box));
                 cmd.Parameters.Add(new SQLiteParameter("@packingdate", p.packingDate));
                 cmd.Parameters.Add(new SQLiteParameter("@pending", p.pending));

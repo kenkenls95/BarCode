@@ -61,23 +61,19 @@ namespace ExportBarcode.DAO
             {
                 DB db = new DB();
                 String query = "";
-                query += "INSERT INTO PL_PACKINGDETAILS([PACKINGDETAILSID], [MODULENO],[IMPORTERSERIESNAME],[PARTID],[BOX],[PACKINGDATE],[SHIPPINGDETAILSID],";
-                query += "[PARTNO],[MINORCODE],[CARFAMILYID],[CONTAINERRENBAN],[ANDONPACKINGDATE],[LINE],[QTYPERBOX]) VALUES (";
-                query += "@packingdetailsid,@moduleno,@importerseriesname,@partid,@box,@packingdate,@shippingdetailsid,@partno,@minorcode,@carfamilyid,"
-                    + "@containerrenban,@andonpackingdate,@line,@qtyperbox)";
+                query += "INSERT INTO PL_PACKINGDETAILS([PACKINGDETAILSID], [MODULENO],[PARTID],[BOX],[PACKINGDATE],";
+                query += "[PARTNO],[MINORCODE],[ANDONPACKINGDATE],[LINE],[QTYPERBOX]) VALUES (";
+                query += "@packingdetailsid,@moduleno,@partid,@box,@packingdate,@partno,@minorcode,"
+                    + "@andonpackingdate,@line,@qtyperbox)";
                 SQLiteCommand cmd = new SQLiteCommand();
                 cmd.CommandText = query;
                 cmd.Parameters.Add(new SQLiteParameter("@packingdetailsid", p.packingDetailsId));
                 cmd.Parameters.Add(new SQLiteParameter("@moduleno", p.moduleNo));
-                cmd.Parameters.Add(new SQLiteParameter("@importerseriesname", p.importerSeriesName));
                 cmd.Parameters.Add(new SQLiteParameter("@partid", p.partId));
                 cmd.Parameters.Add(new SQLiteParameter("@box", p.box));
                 cmd.Parameters.Add(new SQLiteParameter("@packingdate", p.packingDate));
-                cmd.Parameters.Add(new SQLiteParameter("@shippingdetailsid", p.shippingDetailsId));
                 cmd.Parameters.Add(new SQLiteParameter("@partno", p.partNo));
                 cmd.Parameters.Add(new SQLiteParameter("@minorcode", p.minorCode));
-                cmd.Parameters.Add(new SQLiteParameter("@carfamilyid", p.carFamilyId));
-                cmd.Parameters.Add(new SQLiteParameter("@containerrenban", p.containerRenBan));
                 cmd.Parameters.Add(new SQLiteParameter("@andonpackingdate", p.andOnPackingDate));
                 cmd.Parameters.Add(new SQLiteParameter("@line", p.line));
                 cmd.Parameters.Add(new SQLiteParameter("@qtyperbox", p.qtyPerBox));

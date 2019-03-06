@@ -37,7 +37,8 @@ namespace ExportBarcode.SERVICE
                         streamWriter.Write(json_emp);
                     }
                 }
-
+                // nếu quá 3s server ko phản hồi thì pass
+                if (request.Timeout > 3000) return null;
                 WebResponse response = (HttpWebResponse)request.GetResponse();
                 using (var streamReader = new StreamReader(response.GetResponseStream()))
                 {
@@ -70,6 +71,23 @@ namespace ExportBarcode.SERVICE
             }
         }
 
+
+
+        public static string getDataReceiving(Integer receivingId)
+        {
+            try
+            {
+                ReceivingPOJO r = new ReceivingPOJO();
+                r.seq = receivingId.ToString();
+
+                return SendAPI(r, "PUT", "http://" + Constant.Constant.HOST + "/tmv/progress-screen/receiving");
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
         public static string sendData(){
             try {
                 DataTable dt = PackingDAO.getDB();
@@ -85,7 +103,6 @@ namespace ExportBarcode.SERVICE
                         t.moduleNo = dt.Rows[i]["MODULENO"].ToString();
                         t.beginActualPacking = dt.Rows[i]["BEGINACTUALPACKING"].ToString();
                         t.endActualPacking = dt.Rows[i]["ENDACTUALPACKING"].ToString();
-                        // fake date
                         t.packingDate = DateTime.Now.ToString("yyyy-MM-dd");
                         // pending default is not
                         t.pending = 0;
@@ -100,6 +117,45 @@ namespace ExportBarcode.SERVICE
                 return e.Message;
             }
         }
+
+
+
+        public static string sendDataReceiving()
+        {
+            try
+            {
+                DataTable dt = ReceivingDAO.getDB();
+                Meta rs = new Meta();
+                if (dt == null) return "chưa có bản ghi nào";
+                else
+                {
+                    List<ReceivingUpdate> list = new List<ReceivingUpdate>();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        ReceivingUpdate t = new ReceivingUpdate();
+                        t.seq = dt.Rows[i]["SEQ"].ToString();
+                        t.palletNo = dt.Rows[i]["PALLETNO"].ToString();
+                        t.listPart = dt.Rows[i]["LISTPART"].ToString();
+                        t.packingMonth = dt.Rows[i]["PACKINGMONTH"].ToString();
+                        t.packingDate = dt.Rows[i]["PACKINGDATE"].ToString();
+                        t.receivingDate = dt.Rows[i]["RECEIVINGDATE"].ToString();
+                        t.palletQty = dt.Rows[i]["PALLETQTY"].ToString();
+                        t.maxPalletQty = dt.Rows[i]["MAXPALLETQTY"].ToString();
+                        t.supplierCode = dt.Rows[i]["SUPPLIERCODE"].ToString();
+                        t.check = dt.Rows[i]["CHECK"].ToString();
+                    }
+
+                    rs = Converter.Deserialize<Meta>(SendAPI(list, "POST", "http://" + Constant.Constant.HOST + "/tmv/progress-screen/receiving"));
+                    if (rs.status_code.Equals(Constant.Constant.SUCCESS)) return "OK";
+                    else return "Fail";
+                }
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
 
         public static string updateCase(String caseNo, String packingId, DateTime begin, DateTime end)
         {
@@ -201,10 +257,30 @@ namespace ExportBarcode.SERVICE
             }
             
         }
-        public static void test() {
-            //String respon = Service.SendAPI(null, "GET", "http://localhost:8080/tmv/box");
-            String respon = "{\"<boxId>k__BackingField\":\"4632\",\"<code>k__BackingField\":\"DEV15\",\"<description>k__BackingField\":\"abc\",\"<height>k__BackingField\":\"100000.0\",\"<length>k__BackingField\":\"10000.0\",\"<width>k__BackingField\":\"12000.0\",\"<weight>k__BackingField\":\"12.12\",\"<cubic>k__BackingField\":\"12000.0\",\"<boxSize>k__BackingField\":\"10000x12000x100000\"}";
-            test t = Converter.Deserialize<test>(respon);
+
+
+
+        public static Boolean syncDBReceiving()
+        {
+            try
+            {
+                Integer receivingId = ReceivingDAO.checkReceiving();
+                String respon = Service.getDataReceiving(receivingId);
+                if (respon == null) return false;
+                else
+                {
+                    List<ReceivingDTO> list = Converter.Deserialize<List<ReceivingDTO>>(respon);
+                    for (int i = 0; i < list.Count; i++ ) {
+                        ReceivingDAO.insert(list[i]);
+                    }
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
 
         public static Boolean delete()

@@ -55,6 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -246,15 +247,24 @@
             this.button2.Text = "Đồng bộ";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnClean
+            // 
+            this.btnClean.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClean.Location = new System.Drawing.Point(15, 378);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(88, 35);
+            this.btnClean.TabIndex = 41;
+            this.btnClean.Text = "Xóa Dữ liệu";
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
             // btnSetting
             // 
             this.btnSetting.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSetting.Location = new System.Drawing.Point(15, 378);
+            this.btnSetting.Location = new System.Drawing.Point(225, 378);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(88, 35);
-            this.btnSetting.TabIndex = 41;
-            this.btnSetting.Text = "Xóa Dữ liệu";
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnSetting.TabIndex = 57;
+            this.btnSetting.Text = "Cài đặt";
             // 
             // frmMain
             // 
@@ -263,6 +273,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(638, 455);
             this.Controls.Add(this.btnSetting);
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
@@ -320,6 +331,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnSetting;
     }
 }

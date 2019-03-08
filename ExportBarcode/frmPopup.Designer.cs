@@ -42,7 +42,9 @@
             this.lblPackingMonth = new System.Windows.Forms.Label();
             this.lblSupplierCode = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.tblData = new System.Windows.Forms.DataGrid();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,21 +146,37 @@
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(159, 22);
             // 
-            // dataGrid1
+            // tblData
             // 
-            this.dataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dataGrid1.Location = new System.Drawing.Point(3, 227);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(310, 175);
-            this.dataGrid1.TabIndex = 17;
+            this.tblData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.tblData.Location = new System.Drawing.Point(3, 227);
+            this.tblData.Name = "tblData";
+            this.tblData.Size = new System.Drawing.Size(310, 175);
+            this.tblData.TabIndex = 17;
+            // 
+            // lbl
+            // 
+            this.lbl.Location = new System.Drawing.Point(3, 420);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(69, 22);
+            this.lbl.Text = "Quét :";
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(78, 419);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(204, 23);
+            this.txtCode.TabIndex = 28;
             // 
             // frmPopup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(638, 455);
-            this.Controls.Add(this.dataGrid1);
+            this.ClientSize = new System.Drawing.Size(625, 455);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.tblData);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblSupplierCode);
             this.Controls.Add(this.lblPackingMonth);
@@ -192,6 +210,8 @@
         private System.Windows.Forms.Label lblPackingMonth;
         private System.Windows.Forms.Label lblSupplierCode;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.DataGrid dataGrid1;
+        private System.Windows.Forms.DataGrid tblData;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txtCode;
     }
 }

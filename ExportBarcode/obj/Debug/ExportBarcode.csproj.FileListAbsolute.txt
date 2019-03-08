@@ -108,5 +108,5 @@ D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.Resource1.resources
 D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.csproj.GenerateResource.Cache
 D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.exe
 D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.pdb
-D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.Popup.resources
 D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.Setting.resources
+D:\barCode\ExportBarcode\obj\Debug\ExportBarcode.frmPopup.resources

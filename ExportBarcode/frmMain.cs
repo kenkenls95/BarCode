@@ -64,10 +64,12 @@ namespace HelloWord
 
         private string scanModule(String moduleNo)
         {
-            if (moduleNo.Split("-").Length > 1)
+            char[] delimiters = new char[] { '-' };
+            String[] list = moduleNo.Split(delimiters);
+            if (list.Length > 1)
             {
                 frmPopup pop = new frmPopup();
-                
+                pop.loadScreen(list[1]);
             }
             else
             {
@@ -107,7 +109,8 @@ namespace HelloWord
                 else if (dtPacking.Rows.Count > 0) return "Module đã hoàn thành đóng";
                 else return "ModuleNo không tồn tại";
             }
-            
+
+            return string.Empty;
         }
 
         private string scanBoxSupplier(String partNo, String color, String minorCode)
